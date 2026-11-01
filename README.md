@@ -6,7 +6,6 @@
   <img src="docs/screens/screen-1.jpg" width="200" alt="Screenshot 1">
   <img src="docs/screens/screen-2.jpg" width="200" alt="Screenshot 2">
   <img src="docs/screens/screen-3.jpg" width="200" alt="Screenshot 3">
-  <img src="docs/screens/screen-4.jpg" width="200" alt="Screenshot 4">
 </p>
 
 ---
