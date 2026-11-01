@@ -30,7 +30,7 @@
 
 ### Установка
 
-1. Скачайте APK со страницы [Releases](https://github.com/prosam13-ui/oc-to-mobile/releases/latest).
+1. Скачайте APK со страницы [Releases](https://github.com/prosam13/oc-to-mobile/releases/latest).
 2. Разрешите установку из этого источника, если Android спросит.
 3. Откройте приложение и нажмите «Подключиться».
 
@@ -76,7 +76,7 @@ If opencode is already running on your computer, you can connect the app to it a
 
 ### Installation
 
-1. Download the APK from the [Releases](https://github.com/prosam13-ui/oc-to-mobile/releases/latest) page.
+1. Download the APK from the [Releases](https://github.com/prosam13/oc-to-mobile/releases/latest) page.
 2. Allow installation from this source if Android asks.
 3. Open the app and tap "Connect".
 
