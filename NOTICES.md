@@ -18,27 +18,10 @@ OC to Mobile не содержит собственного сервера и н
 | proot | `bin/proot`, `libexec/proot/loader`, `libexec/proot/loader32` | 5.1.107.102 | GPL-2.0 | пакет `proot` из `packages.termux.dev` (`termux/proot`) |
 | talloc | `lib/libtalloc.so.2` | 2.5.0 | LGPL-3.0-or-later | пакет `libtalloc` из `packages.termux.dev` (`termux/libtalloc`) |
 | libandroid-shmem | `lib/libandroid-shmem.so` | 0.7 | BSD-3-Clause | пакет `libandroid-shmem` из `packages.termux.dev` (`termux/libandroid-shmem`) |
-| librust_pty (bun-pty, bionic) | `lib/librust_pty_arm64.so` | graft из PR #40, sha256 `58aeeb46…1c2d` | MIT | `TanakaLun/opencode-termux`, PR «fix(pty): graft bionic librust_pty», сборка `tools/bun-pty-embed/build-embed.sh` |
 
-Актуальный `app/assets/runtime/arm64-v8a/payload.json` содержит 9 файлов и НЕ содержит
-`librust_pty_arm64.so`: в opencode 2.2.5 терминал обслуживает отдельный демон
-`opencode-pty`, и подмена `bun-pty` больше не нужна (код на неё по-прежнему
-рассчитан и включится, если файл положить в payload).
-
-## librust_pty (bun-pty, bionic)
-
-Встроенная в серверный bunfs библиотека bun-pty собрана под glibc и на Android не
-открывается (`libpthread.so.0 not found`), из-за чего в Web UI не создаётся
-терминал (`POST /api/pty` → 500, `undefined is not an object (evaluating
-'i.symbols')`). Рабочий обход для opencode 2.1.x: рядом с сервером лежал
-bionic-вариант той же библиотеки (8 экспортов `bun_pty_*`), а `ServerProcess`
-указывал на него через `BUN_PTY_LIB`. Файл распространяется без изменений, sha256
-`58aeeb4647cdcdb7e4d9f855ebaa75339ab934039d7ddd977a0be5a3b5cf1c2d`. Логика
-замены и сборки — `tools/transplant/swap_pty.py` и `tools/bun-pty-embed/` в
-указанном репозитории.
-
-Начиная с opencode 2.2.5 библиотека в payload не поставляется: терминал работает
-через собственный демон `opencode-pty` (см. ниже).
+Актуальный `app/assets/runtime/arm64-v8a/payload.json` содержит 9 файлов: `bootstrap.zip`,
+proot с лоадерами, talloc, libandroid-shmem, `server/opencode`,
+`server/libopencode-crhandler.so` и `server/opencode-pty`.
 
 ## opencode-pty (демон терминала)
 
