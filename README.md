@@ -1,4 +1,4 @@
-# OC to mobile
+# OC to Mobile
 
 **[Русский](#русский) · [English](#english)**
 
