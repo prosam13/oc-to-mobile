@@ -38,12 +38,13 @@
 |---|---|
 | Android | 9.0 и новее |
 | Процессор | arm64 (все современные телефоны) |
-| Размер APK | ~134 МБ |
+| Размер APK | ~141 МБ |
 | Свободное место | ~1 ГБ — при первом запуске приложение распаковывает свои компоненты |
 
 Первый запуск занимает до минуты, дальше всё открывается сразу.
 
-**Предупреждение при установке.** Android может сообщить, что приложение «создано для более ранней версии Android», или что оно из неизвестного источника. Это ожидаемо: приложение не распространяется через Google Play. Выбирайте «Всё равно установить».
+> [!WARNING]
+> **Предупреждение при установке.** Android может сообщить, что приложение «создано для более ранней версии Android», или что оно из неизвестного источника. Это ожидаемо: приложение не распространяется через Google Play. Выбирайте «Всё равно установить».
 
 ### Известные ограничения
 
@@ -84,12 +85,13 @@ If opencode is already running on your computer, you can connect the app to it a
 |---|---|
 | Android | 9.0 or newer |
 | CPU | arm64 (all modern phones) |
-| APK size | ~134 MB |
+| APK size | ~141 MB |
 | Free storage | ~1 GB — the app unpacks its components on first launch |
 
 The first launch takes up to a minute; after that everything opens instantly.
 
-**Installation warning.** Android may say the app "was built for an older version of Android", or that it comes from an unknown source. This is expected: the app is not distributed through Google Play. Choose "Install anyway".
+> [!WARNING]
+> **Installation warning.** Android may say the app "was built for an older version of Android", or that it comes from an unknown source. This is expected: the app is not distributed through Google Play. Choose "Install anyway".
 
 ### Known limitations
 
